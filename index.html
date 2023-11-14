@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            cursor: pointer;
+            border:5px solid green;
+        }
+        /* Style the timer */
+        .countdown {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 20px;
+        color: #75e31b;
+        border: 3px dashed red;
+        outline: 10px dotted green;
+        padding: 20px;
+        font-weight: bold;
+        }
+        
+        body{
+        background:#000000;
+        color:#fff; 
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url('photo.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+        background-size: cover;
+        background-position: center;
+        }
+    </style>
+</head>
+<body>
+	
+	<h1 style="color: #4287f5; text-align: center;">Rubel Hossain</h1>
+	<p style="text-align: center; font-size: 20px;">It's easy to do, bro.</p>
+	
+	<div style="padding: 20px;">
+	<!-- Countdown timer placeholders -->
+	<div class="countdown" id="countdown">
+	
+	</div>
+	<div style="margin-top:50px; font-size:30px; text-align:center; color:red;" id="time"></div>
+	</div>
+	<script>
+	function updateCountdown() {
+	// Get the current date
+	const currentDate = new Date();
+	
+	// Set the start date (November 5, 2023)
+	const startDate = new Date(2023, 10, 13); // Note: Month is zero-based, so 10 is November
+	
+	// Set the end date (November 19, 2023)
+	const endDate = new Date(2023, 10, 18); // Note: Month is zero-based, so 10 is November
+	
+	if (currentDate < startDate) {
+	// Countdown hasn't started yet
+	countdownElement.innerHTML = "Countdown begins on November 13, 2023.";
+	} else if (currentDate > endDate) {
+	// Countdown has ended
+	countdownElement.innerHTML = "Countdown has ended.";
+	} else {
+	// Calculate the number of days remaining
+	const timeRemaining = endDate - currentDate;
+	const daysRemaining = Math.ceil(timeRemaining / (1000 * 60 * 60 * 24));
+	
+	// Display the countdown
+	countdownElement.innerHTML = `${daysRemaining} days remaining to pay $50`;
+	}
+	}
+	
+	// Get the countdown element
+	const countdownElement = document.getElementById("countdown");
+	
+	// Update the countdown immediately and every second
+	updateCountdown();
+	setInterval(updateCountdown, 1000);
+	</script>
+	<script>
+	function updateTime() {
+	// Get the current date and time
+	const now = new Date();
+	
+	// Extract hours, minutes, and seconds
+	const hours = now.getHours().toString().padStart(2, '0');
+	const minutes = now.getMinutes().toString().padStart(2, '0');
+	const seconds = now.getSeconds().toString().padStart(2, '0');
+	
+	// Display the time and seconds
+	timeElement.innerHTML = `${hours}:${minutes}:${seconds}`;
+	}
+	
+	// Get the time element
+	const timeElement = document.getElementById("time");
+	
+	// Update the time immediately and every second
+	updateTime();
+	setInterval(updateTime, 1000);
+	</script>
+
+
+    <h1 style="color:#fff;">Private Photo Gallery</h1>
+
+    <div class="gallery">
+        <!-- Images from 1.jpg to 44.jpg -->
+        <img src="photos/1.jpg" alt="1.jpg">
+        <img src="photos/2.jpg" alt="2.jpg">
+        <img src="photos/3.jpg" alt="2.jpg">
+        <img src="photos/4.jpg" alt="2.jpg">
+        <img src="photos/5.jpg" alt="2.jpg">
+        <img src="photos/6.jpg" alt="2.jpg">
+        <img src="photos/7.jpg" alt="2.jpg">
+        <img src="photos/8.jpg" alt="2.jpg">
+        <img src="photos/9.jpg" alt="2.jpg">
+        <img src="photos/10.jpg" alt="2.jpg">
+        <img src="photos/11.jpg" alt="2.jpg">
+        <img src="photos/12.jpg" alt="2.jpg">
+        <img src="photos/13.jpg" alt="2.jpg">
+        <img src="photos/14.jpg" alt="2.jpg">
+        <img src="photos/15.jpg" alt="2.jpg">
+        <img src="photos/16.jpg" alt="2.jpg">
+        <img src="photos/17.jpg" alt="2.jpg">
+        <img src="photos/18.jpg" alt="2.jpg">
+        <img src="photos/19.jpg" alt="2.jpg">
+        <img src="photos/20.jpg" alt="2.jpg">
+        <img src="photos/21.jpg" alt="2.jpg">
+        <img src="photos/22.jpg" alt="2.jpg">
+        <img src="photos/23.jpg" alt="2.jpg">
+        <img src="photos/24.jpg" alt="2.jpg">
+        <img src="photos/25.jpg" alt="2.jpg">
+        <img src="photos/26.jpg" alt="2.jpg">
+        <img src="photos/27.jpg" alt="2.jpg">
+        <img src="photos/28.jpg" alt="2.jpg">
+        <img src="photos/29.jpg" alt="2.jpg">
+        <img src="photos/30.jpg" alt="2.jpg">
+        <img src="photos/31.jpg" alt="2.jpg">
+        <img src="photos/32.jpg" alt="2.jpg">
+        <img src="photos/33.jpg" alt="2.jpg">
+        <img src="photos/34.jpg" alt="2.jpg">
+        <img src="photos/35.jpg" alt="2.jpg">
+        <img src="photos/36.jpg" alt="2.jpg">
+        <img src="photos/37.jpg" alt="2.jpg">
+        <img src="photos/38.jpg" alt="2.jpg">
+        <img src="photos/39.jpg" alt="2.jpg">
+        <img src="photos/40.jpg" alt="2.jpg">
+        <img src="photos/41.jpg" alt="2.jpg">
+        <img src="photos/42.jpg" alt="2.jpg">
+        <img src="photos/43.jpg" alt="2.jpg">
+        <img src="photos/44.jpg" alt="2.jpg">
+        
+        <!-- Add more img tags for 3.jpg to 44.jpg -->
+
+        <!-- Images from 45.jpeg to 85.jpeg -->
+        <img src="photos/45.jpeg" alt="45.jpeg">
+        <img src="photos/46.jpeg" alt="46.jpeg">
+        <img src="photos/47.jpeg" alt="46.jpeg">
+        <img src="photos/48.jpeg" alt="46.jpeg">
+        <img src="photos/49.jpeg" alt="46.jpeg">
+        <img src="photos/50.jpeg" alt="46.jpeg">
+        <img src="photos/51.jpeg" alt="46.jpeg">
+        <img src="photos/52.jpeg" alt="46.jpeg">
+        <img src="photos/53.jpeg" alt="46.jpeg">
+        <img src="photos/54.jpeg" alt="46.jpeg">
+        <img src="photos/55.jpeg" alt="46.jpeg">
+        <img src="photos/56.jpeg" alt="46.jpeg">
+        <img src="photos/57.jpeg" alt="46.jpeg">
+        <img src="photos/58.jpeg" alt="46.jpeg">
+        <img src="photos/59.jpeg" alt="46.jpeg">
+        <img src="photos/60.jpeg" alt="46.jpeg">
+        <img src="photos/61.jpeg" alt="46.jpeg">
+        <img src="photos/62.jpeg" alt="46.jpeg">
+        <img src="photos/63.jpeg" alt="46.jpeg">
+        <img src="photos/64.jpeg" alt="46.jpeg">
+        <img src="photos/65.jpeg" alt="46.jpeg">
+        <img src="photos/66.jpeg" alt="46.jpeg">
+        <img src="photos/67.jpeg" alt="46.jpeg">
+        <img src="photos/68.jpeg" alt="46.jpeg">
+        <img src="photos/69.jpeg" alt="46.jpeg">
+        <img src="photos/70.jpeg" alt="46.jpeg">
+        <img src="photos/71.jpeg" alt="46.jpeg">
+        <img src="photos/72.jpeg" alt="46.jpeg">
+        <img src="photos/73.jpeg" alt="46.jpeg">
+        <img src="photos/74.jpeg" alt="46.jpeg">
+        <img src="photos/75.jpeg" alt="46.jpeg">
+        <img src="photos/76.jpeg" alt="46.jpeg">
+        <img src="photos/77.jpeg" alt="46.jpeg">
+        <img src="photos/78.jpeg" alt="46.jpeg">
+        <img src="photos/79.jpeg" alt="46.jpeg">
+        <img src="photos/80.jpeg" alt="46.jpeg">
+        <img src="photos/81.jpeg" alt="46.jpeg">
+        <img src="photos/82.jpeg" alt="46.jpeg">
+        <img src="photos/83.jpeg" alt="46.jpeg">
+        <img src="photos/84.jpeg" alt="46.jpeg">
+        <img src="photos/85.jpeg" alt="46.jpeg">
+        
+        <!-- Add more img tags for 47.jpeg to 85.jpeg -->
+    </div>
+
+</body>
+</html>
